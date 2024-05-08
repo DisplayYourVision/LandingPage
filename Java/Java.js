@@ -17,6 +17,7 @@ window.addEventListener("load", reveal);
 
 const menuBTN = document.querySelector('.Menu')
 let menuOpen = false;
+
 menuBTN.addEventListener('click', () => 
 {
     if(!menuOpen)
@@ -29,3 +30,19 @@ menuBTN.addEventListener('click', () =>
         menuOpen = false;
     }
 })
+
+function mouseHoverPart(index)
+{
+    document.getElementById("part1").style.opacity = 0;
+    document.getElementById("part2").style.opacity = 0;
+    document.getElementById("part3").style.opacity = 0;
+
+    document.getElementById("part" + index).style.opacity = 1;
+}
+
+function mouseExitPart(index)
+{
+    document.getElementById("part1").style.opacity = 1;
+    document.getElementById("part2").style.opacity = 1;
+    document.getElementById("part3").style.opacity = 1;
+}

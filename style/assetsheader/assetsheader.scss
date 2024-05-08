@@ -105,7 +105,7 @@
 .reveal{
     transform: translateY(150px);
     opacity: 0;
-    transition: 1s all ease;
+    transition: 0.5s all ease;
 }
   
 .reveal.active{
@@ -115,7 +115,7 @@
 
 .startactive
 {
-    animation: Slide_UP 2s ease-in-out;
+    animation: Slide_UP 1s ease-in-out;
 }
 
 .Menu

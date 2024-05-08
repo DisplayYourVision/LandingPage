@@ -2,7 +2,8 @@
 body {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-image: url("../Textures/bg.jpg");
+  background-size: 100vw;
   position: fixed;
 }
 
@@ -17,7 +18,7 @@ body {
   margin-left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  margin-top: 12vh;
+  margin-top: 4vh;
   z-index: 1;
   color: white;
   width: 80%;
@@ -35,9 +36,8 @@ body {
   border-radius: 20px;
 }
 
-#part1 {
+.part {
   transform: translateX(-50%);
-  left: 10vw;
   position: absolute;
   border-radius: 5%;
   width: 20vw;
@@ -48,60 +48,26 @@ body {
   background-color: white;
   transition: all 0.2s;
   box-sizing: border-box;
+}
+
+#part1 {
+  left: 10vw;
 }
 
 #part2 {
-  transform: translateX(-50%);
   left: 40vw;
-  position: absolute;
-  border-radius: 5%;
-  width: 20vw;
-  height: 20vw;
-  padding: 2vw;
-  display: table-cell;
-  text-align: left;
-  background-color: white;
-  transition: all 0.2s;
-  box-sizing: border-box;
 }
 
 #part3 {
-  transform: translateX(-50%);
   left: 70vw;
-  position: absolute;
-  border-radius: 5%;
-  width: 20vw;
-  height: 20vw;
-  padding: 2vw;
-  display: table-cell;
-  text-align: left;
-  background-color: white;
-  transition: all 0.2s;
-  box-sizing: border-box;
 }
 
-#part1:hover {
+.part:hover {
   width: 22vw;
   height: 22vw;
 }
-#part1:hover .PartButton {
+.part:hover .PartButton {
   font-size: 0.9vw;
-}
-
-#part2:hover {
-  width: 22vw;
-  height: 22vw;
-}
-#part2:hover .PartButton {
-  font-size: 0.9vw;
-}
-
-#part3:hover {
-  width: 22vw;
-  height: 22vw;
-}
-#part3:hover .PartButton {
-  font-size: 0.9w;
 }
 
 .PartTitle {

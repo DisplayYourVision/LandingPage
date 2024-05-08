@@ -27,19 +27,25 @@
 :root
 {
     --NavBTNwidth: 100%;
-    --NavBTNHeight: 80%;
+    --NavBTNHeight: 100%;
 }
 
 #header 
 {
-    position: fixed;
+    position: relative;
     top: 0;
-    height: 8vh;
+    height: 10vh;
     width: 100vw;
     font-family: "Poppins", sans-serif;
-    background-color: white;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(10px);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     transition: all 0.2s ease-in-out;
     z-index: 10;
+    display: flex;
+    align-items: center;
+
 }
 
 #header.active 
@@ -52,13 +58,18 @@
     height: 14vh;
 }
 
+#Icon {
+    height: 4vw;
+    width: 4vw;
+    position: relative;
+    left: 2%;
+}
+
 #Titel
 {
-    width: 20vw;
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
-    left: 20%;
+    width: 26vw;
+    position: relative;
+    left: 5%;
     font-size: 120%;
     color: black;
 }
@@ -67,40 +78,22 @@
 {
     font-size: 75%;
 }
-
-#Icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 15%;
-    height: 80%;
-    width: auto;
-}
   
 #NavBar {
+    width: 40vw;
+    position: relative;
     padding: 0px;
     list-style-type: none;
     display:flex;
     white-space: inherit;
-    justify-content:center;
-    width: 40vw;
-    height: 50%;
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    left: 50vw;
-    background-color: transparent;
+    justify-content: center;
 }
 
 .NavListOJ
 {
-    width: 25%;
-    height: 100%;
-    position: relative;
     width: var(--NavBTNwidth);
     height: var(--NavBTNHeight);
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
     border: 0;
     background: transparent;
 }
@@ -148,12 +141,14 @@
 .BTN:hover::before {
     border-top-color: rgba(0, 200, 255, 1);
     border-right-color: rgba(0, 200, 255, 1);
+    border-radius: 10px;
     transition: width 0.1s ease-out, height 0.1s ease-out 0.1s;
 }
   
 .BTN:hover::after {
     border-bottom-color: rgba(0, 200, 255, 1);
     border-left-color: rgba(0, 200, 255, 1);
+    border-radius: 10px;
     transition: border-color 0s ease-out 0.2s, width 0.1s ease-out 0.2s, height 0.1s ease-out 0.3s;
 }
 
@@ -185,7 +180,7 @@
 .reveal{
     transform: translateY(150px);
     opacity: 0;
-    transition: 1s all ease;
+    transition: 0.5s all ease;
 }
   
 .reveal.active{
@@ -195,5 +190,5 @@
 
 .startactive
 {
-    animation: Slide_UP 2s ease-in-out;
+    animation: Slide_UP 1s ease-in-out;
 }
